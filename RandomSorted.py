@@ -10,7 +10,7 @@ def make_md5(data):
 
 
 def make_random_sorted(n,seed):
-    l = [[make_md5(key+"{}".format(i)+seed),i] for i in range(n)]
+    l = [[make_md5(key+"({}/{})".format(i,n)+seed),i] for i in range(n)]
     l.sort()
     return [item[1] for item in l]
 
